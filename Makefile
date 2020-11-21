@@ -1,9 +1,8 @@
-CC=g++
+FLTKCONFIG=/usr/local/src/fltk-1.4.x-git/fltk-config
 LD=g++
 
-CFLAGS=-g -Wall `fltk2-config --cflags` -O0
-CXXFLAGS=-g -Wall `fltk2-config --cxxflags` -O0
-LDFLAGS=`fltk2-config --ldstaticflags --use-images`
+CXXFLAGS=-g -Wall `$(FLTKCONFIG) --cxxflags`
+LDFLAGS=`$(FLTKCONFIG) --ldstaticflags --use-images`
 LDLIBS=
 LIBS=
 
@@ -18,7 +17,7 @@ $(EXE): $(OBJ)
 	$(LD) $(OBJ) -o $(EXE) $(LDFLAGS) $(LIBS) $(LDLIBS)
 
 .cxx.o:
-	$(CC) -c $(CFLAGS) $< -o $@
+	$(CXX) -c $(CXXFLAGS) $< -o $@
 
 clean:
 	rm -rf *.o $(EXE)
