@@ -3,10 +3,13 @@
 A very rough fltk 1.4.x port of pyrgen's fltk2 / GPL2 based widget "TableBox", version 0.9.x
 which was posted on FLTK's Links page at https://www.fltk.org/links.php?V339+Q back in 2007 I think.
 
+![screenshot](https://raw.githubusercontent.com/erco77/TableBox/main/docs/images/test1-demo-screenshot.jpg)
+
 I made this port mainly to just explore the widget. I couldn't get the old + abandoned fltk2 toolkit 
 to build with modern compilers, so I tried hacking TableBox's code to roughly port it to build
 with fltk 1.4.x. While it builds and the test program now runs, I'm not sure it fully works
-as expected -- needs more work.
+as expected -- needs more work. Here's a ![short screenshot-video](https://raw.githubusercontent.com/erco77/TableBox/main/docs/images/test1-exercise.webm)
+showing the current code's resizing action.
 
 Perhaps someone else more motivated than I can take this rough port as a starting point
 for a cleaner implementation; feel free to fork and continue.
