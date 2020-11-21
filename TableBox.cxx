@@ -28,10 +28,12 @@ void TableBox::layout() {
     uint x_fixed_size_all_items = 0;
     uint y_fixed_size_all_items = 0;
     
-    uint _ox = x();  // was 0
-    uint _oy = y();  // was 0
+    uint _ox = x() + Fl::box_dx(box());  // was 0
+    uint _oy = y() + Fl::box_dy(box());  // was 0
     uint _x = _ox;   // was 0
     uint _y = _oy;
+    uint _w = w() - Fl::box_dw(box());
+    uint _h = h() - Fl::box_dh(box());
     
     // x-axes
     for (uint i = 0; i < t->cols; i++) {
@@ -58,7 +60,7 @@ void TableBox::layout() {
 	    x_fixed_size_all_items += x_fixed_size_item[i];
     
     if (x_expand_items > 0)
-	x_expand_size_item = (uint)((w() - x_fixed_size_all_items - (t->cols - 1) * t->gap->w) / x_expand_items);
+	x_expand_size_item = (uint)((_w - x_fixed_size_all_items - (t->cols - 1) * t->gap->w) / x_expand_items);
     
     // y-axes
     for (uint j = 0; j < t->rows; j++) {
@@ -85,7 +87,7 @@ void TableBox::layout() {
 	    y_fixed_size_all_items += y_fixed_size_item[j];
     
     if (y_expand_items > 0)
-	y_expand_size_item = (uint)((h() - y_fixed_size_all_items - (t->rows - 1) * t->gap->h) / y_expand_items);
+	y_expand_size_item = (uint)((_h - y_fixed_size_all_items - (t->rows - 1) * t->gap->h) / y_expand_items);
     
     uint Wv, Wm, Xm;
     uint Hv, Hm, Ym;
