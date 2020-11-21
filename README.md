@@ -1,6 +1,6 @@
 # TableBox
 
-A very rough fltk 1.4.x port of pyrgen's fltk2 / GPL2 based widget "TableBox", version 0.9.x
+A very rough fltk 1.x port of pyrgen's original fltk2/GPLv2 "TableBox" widget (0.9.x) up on [google code](https://code.google.com/archive/p/tablebox/)
 which was posted on FLTK's Links page at https://www.fltk.org/links.php?V339+Q back in 2007 I think.
 
 ![screenshot](https://raw.githubusercontent.com/erco77/TableBox/main/docs/images/test1-demo-screenshot.jpg)
