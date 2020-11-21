@@ -22,7 +22,7 @@ The main things I had to tweak to do the port (and should probably be checked):
       Not sure this works as intended
       
 Someone cleaning this port up would want to look carefully at
-[my diffs](https://github.com/erco77/TableBox/commit/7ea3a264c4ef8e19b3727ca1ab79701043ddf38f?w=1)
+[my diffs](https://github.com/erco77/TableBox/commit/ae1dbdc443a0a09f5da9f8813e15782348802b6c?w=1)
 from the original pyren code (4b6dbbb) with white space disabled and look for problems.
       
 
